@@ -10,7 +10,7 @@
 	<!-- 데이터베이스 연결 -->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
-        <property name="url" value="jdbc:oracle:thin:@192.168.0.30:1521:xe" />
+        <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />
         <property name="username" value="kidsnow"/>
         <property name="password" value="java006$"/>
     </bean>
@@ -22,7 +22,7 @@
         <property name="configLocation" value="classpath:/mybatis-config.xml" />
 
         <!-- SQL 파일의 위치를 지정합니다. -->
-        <property name="mapperLocations" value="classpath:/sqlmap/*.xml" />
+        <property name="mapperLocations" value="classpath:com.scv.director.mapper.*.xml" />
     </bean>
 
     <!-- SqlSession -->
