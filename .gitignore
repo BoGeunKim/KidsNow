@@ -2,3 +2,5 @@
 .classpath
 .springbeans
 .project
+.MF
+*.properties
