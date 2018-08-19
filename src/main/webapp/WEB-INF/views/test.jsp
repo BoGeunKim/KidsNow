@@ -12,6 +12,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<h2>기본 테스트</h2>
+	<hr>
 	<table>
 		<tr>
 			<th> 번호</th>
