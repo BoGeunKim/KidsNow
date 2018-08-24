@@ -1,21 +1,26 @@
-package com.scv.director.dto;
+package com.scv.chief.dto;
 
 public class TestDTO {
-	private int num;
-	private String today;
+	private String id;
+	private String name;
+	public String getId()
+	{
+		return id;
+	}
+	public void setId(String id)
+	{
+		this.id = id;
+	}
+	public String getName()
+	{
+		return name;
+	}
+	public void setName(String name)
+	{
+		this.name = name;
+	}
 	
-	public int getNum() {
-		return num;
-	}
-	public void setNum(int num) {
-		this.num = num;
-	}
-	public String getToday() {
-		return today;
-	}
-	public void setToday(String today) {
-		this.today = today;
-	}
+	
 	
 	
 }

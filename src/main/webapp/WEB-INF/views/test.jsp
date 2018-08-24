@@ -21,8 +21,8 @@
 		</tr>
 		<c:forEach var="item" items="${list }">
 		<tr>
-			<td> ${item.num }</td>
-			<td> ${item.today }</td>
+			<td> ${item.id }</td>
+			<td> ${item.name }</td>
 		</tr>
 		</c:forEach>
 	</table>

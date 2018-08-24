@@ -5,8 +5,8 @@
 <mapper namespace="com.scv.director.impl.IDirectorDAO">
 
 <select id="test" resultType="com.scv.director.dto.TestDTO">
-	SELECT NUM, TODAY
-	FROM TEST
+	SELECT id, name
+	FROM TEST_TBL
 </select>
 
 </mapper>
