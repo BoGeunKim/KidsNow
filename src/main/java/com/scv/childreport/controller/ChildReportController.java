@@ -15,7 +15,7 @@ public class ChildReportController {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	@RequestMapping(value="/test.do")
+	@RequestMapping(value="/test4.do")
 	public String test(ModelMap map) {
 		
 		return "test";

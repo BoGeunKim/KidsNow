@@ -1,3 +1,4 @@
+
 package com.scv.diet.controller;
 
 import org.apache.ibatis.session.SqlSession;
@@ -15,7 +16,7 @@ public class DietController {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	@RequestMapping(value="/test.do")
+	@RequestMapping(value="/test6.do")
 	public String test(ModelMap map) {
 		
 		return "test";

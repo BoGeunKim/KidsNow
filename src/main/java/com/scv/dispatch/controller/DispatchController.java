@@ -15,7 +15,7 @@ public class DispatchController {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	@RequestMapping(value="/test.do")
+	@RequestMapping(value="/test7.do")
 	public String test(ModelMap map) {
 		
 		return "test";

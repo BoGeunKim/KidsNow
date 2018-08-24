@@ -15,7 +15,7 @@ public class AdminController {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	@RequestMapping(value="/test.do")
+	@RequestMapping(value="/b.do")
 	public String test(ModelMap map) {
 		
 		return "test";

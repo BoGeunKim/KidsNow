@@ -15,7 +15,7 @@ public class PhotoBoardController {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	@RequestMapping(value="/test.do")
+	@RequestMapping(value="/test13.do")
 	public String test(ModelMap map) {
 		
 		return "test";

@@ -15,7 +15,7 @@ public class HomeReportController {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	@RequestMapping(value="/test.do")
+	@RequestMapping(value="/test8.do")
 	public String test(ModelMap map) {
 		
 		return "test";

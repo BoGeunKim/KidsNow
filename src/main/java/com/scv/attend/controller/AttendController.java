@@ -15,7 +15,7 @@ public class AttendController {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	@RequestMapping(value="/test.do")
+	@RequestMapping(value="/a.do")
 	public String test(ModelMap map) {
 		
 		return "test";

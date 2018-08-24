@@ -19,12 +19,10 @@
 			<th> 번호</th>
 			<th> 날짜</th>
 		</tr>
-		<c:forEach var="item" items="${list }">
 		<tr>
-			<td> ${item.id }</td>
-			<td> ${item.name }</td>
+			<td> ${hh}</td>
+			<td> ${hh}</td>
 		</tr>
-		</c:forEach>
 	</table>
 </body>
 </html>

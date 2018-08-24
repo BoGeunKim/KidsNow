@@ -15,7 +15,7 @@ public class StationController {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	@RequestMapping(value="/test.do")
+	@RequestMapping(value="/test18.do")
 	public String test(ModelMap map) {
 		
 		return "test";

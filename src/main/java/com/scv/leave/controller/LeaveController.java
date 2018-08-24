@@ -15,7 +15,7 @@ public class LeaveController {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	@RequestMapping(value="/test.do")
+	@RequestMapping(value="/test10.do")
 	public String test(ModelMap map) {
 		
 		return "test";

@@ -22,18 +22,14 @@ public class ChiefController {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	@RequestMapping(value="/test.do")
+	@RequestMapping(value="/test22.do")
 	public String test(ModelMap map) {
 		IChiefDAO dao = sqlSession.getMapper(IChiefDAO.class);
 		System.out.println("tset");
 		
-		ArrayList<TestDTO> list = dao.test();
-		map.addAttribute("list", list);
+		//ArrayList<TestDTO> list = dao.test();
+		map.addAttribute("hh", "테스트");
 		
-		for (TestDTO testDTO : list) {
-			System.out.println(testDTO.getId());
-			System.out.println(testDTO.getName());
-		}
 		
 		return "test";
 	}
