@@ -15,6 +15,7 @@ public class UserController {
 	@Autowired
 	private SqlSession sqlSession;
 	
+	// 원장님, 선생님, 학부모 로그인
 	@RequestMapping(value="/test19.do")
 	public String test(ModelMap map) {
 		

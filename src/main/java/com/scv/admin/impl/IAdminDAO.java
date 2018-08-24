@@ -2,7 +2,7 @@ package com.scv.admin.impl;
 
 public interface IAdminDAO
 {
-	// 로그인
+	// 로그인(ID,PW 확인)
 	
 	// 로그아웃
 	
