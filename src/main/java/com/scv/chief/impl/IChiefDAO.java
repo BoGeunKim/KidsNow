@@ -1,11 +1,11 @@
-package com.scv.director.impl;
+package com.scv.chief.impl;
 
 import java.util.ArrayList;
 
-import com.scv.director.dto.TestDTO;
+import com.scv.chief.dto.TestDTO;
 
-public interface IDirectorDAO {
+public interface IChiefDAO {
 
-	// mybatis ¿¬µ¿ Å×½ºÆ®
+	// mybatis ï¿½ï¿½ï¿½ï¿½ ï¿½×½ï¿½Æ®
 	public ArrayList<TestDTO> test();
 }

@@ -1,4 +1,4 @@
-package com.scv.director.controller;
+package com.scv.chief.controller;
 
 import java.util.ArrayList;
 
@@ -9,28 +9,31 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.scv.director.dto.TestDTO;
-import com.scv.director.impl.IDirectorDAO;
+import com.scv.chief.dto.TestDTO;
+import com.scv.chief.impl.IChiefDAO;
 
+/**
+ * @author jinhy
+ * 원장님 컨트롤러
+ */
 @Controller
-public class DirectorController {
+public class ChiefController {
 
 	@Autowired
 	private SqlSession sqlSession;
 	
-	
 	// mybatis ���� �׽�Ʈ
 	@RequestMapping(value="/test.do")
 	public String test(ModelMap map) {
-		IDirectorDAO dao = sqlSession.getMapper(IDirectorDAO.class);
+		IChiefDAO dao = sqlSession.getMapper(IChiefDAO.class);
 		System.out.println("tset");
 		
 		ArrayList<TestDTO> list = dao.test();
 		map.addAttribute("list", list);
 		
 		for (TestDTO testDTO : list) {
-			System.out.println(testDTO.getNum());
-			System.out.println(testDTO.getToday());
+			System.out.println(testDTO.getId());
+			System.out.println(testDTO.getName());
 		}
 		
 		return "test";
