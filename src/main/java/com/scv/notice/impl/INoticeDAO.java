@@ -1,6 +1,6 @@
 package com.scv.notice.impl;
 
-public class INoticeDAO
+public interface INoticeDAO
 {
 
 }

@@ -1,6 +1,6 @@
 package com.scv.admin.impl;
 
-public class IAdminDAO
+public interface IAdminDAO
 {
 	// 로그인
 	

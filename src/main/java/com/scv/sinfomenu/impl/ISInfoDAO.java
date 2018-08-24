@@ -1,6 +1,6 @@
 package com.scv.sinfomenu.impl;
 
-public class ISInfoDAO
+public interface ISInfoDAO
 {
 
 }

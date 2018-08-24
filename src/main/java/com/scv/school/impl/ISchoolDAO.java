@@ -1,6 +1,6 @@
 package com.scv.school.impl;
 
-public class ISchoolDAO
+public interface ISchoolDAO
 {
 
 }

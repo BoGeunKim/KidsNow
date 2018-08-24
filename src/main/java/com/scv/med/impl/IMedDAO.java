@@ -1,6 +1,6 @@
 package com.scv.med.impl;
 
-public class IMedDAO
+public interface IMedDAO
 {
 
 }

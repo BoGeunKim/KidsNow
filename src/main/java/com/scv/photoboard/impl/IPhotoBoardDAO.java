@@ -1,6 +1,6 @@
 package com.scv.photoboard.impl;
 
-public class IPhotoBoardDAO
+public interface IPhotoBoardDAO
 {
 
 }

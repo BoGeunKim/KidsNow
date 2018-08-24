@@ -1,6 +1,6 @@
 package com.scv.child.impl;
 
-public class IChildDAO
+public interface IChildDAO
 {
 
 }

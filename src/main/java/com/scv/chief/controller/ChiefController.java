@@ -9,6 +9,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.scv.admin.impl.IAdminDAO;
 import com.scv.chief.dto.TestDTO;
 import com.scv.chief.impl.IChiefDAO;
 
@@ -18,16 +19,17 @@ import com.scv.chief.impl.IChiefDAO;
  */
 @Controller
 public class ChiefController {
-
 	@Autowired
 	private SqlSession sqlSession;
 	
+	// 관리자 아이디 비밀번호 확인메소드
 	@RequestMapping(value="/test22.do")
-	public String test(ModelMap map) {
-		IChiefDAO dao = sqlSession.getMapper(IChiefDAO.class);
-		System.out.println("tset");
+	public String checkAdminLogin(ModelMap map) {
+		IAdminDAO dao = sqlSession.getMapper(IAdminDAO.class);
 		
-		//ArrayList<TestDTO> list = dao.test();
+		//dao.checkAdminLogin();
+		
+		
 		map.addAttribute("hh", "테스트");
 		
 		

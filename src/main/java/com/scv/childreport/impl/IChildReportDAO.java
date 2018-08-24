@@ -1,6 +1,6 @@
 package com.scv.childreport.impl;
 
-public class IChildReportDAO
+public interface IChildReportDAO
 {
 
 }

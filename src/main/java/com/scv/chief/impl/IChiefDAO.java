@@ -6,6 +6,6 @@ import com.scv.chief.dto.TestDTO;
 
 public interface IChiefDAO {
 
-	// mybatis ���� �׽�Ʈ
+	
 	public ArrayList<TestDTO> test();
 }

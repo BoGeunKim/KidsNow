@@ -1,6 +1,6 @@
 package com.scv.user.impl;
 
-public class IUserDAO
+public interface IUserDAO
 {
 
 }

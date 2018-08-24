@@ -1,6 +1,6 @@
 package com.scv.route.impl;
 
-public class IRouteDAO
+public interface IRouteDAO
 {
 
 }

@@ -1,6 +1,6 @@
 package com.scv.workorder.impl;
 
-public class IWorkOrderDAO
+public interface IWorkOrderDAO
 {
 
 }

@@ -1,6 +1,6 @@
 package com.scv.station.impl;
 
-public class IStationDAO
+public interface IStationDAO
 {
 
 }

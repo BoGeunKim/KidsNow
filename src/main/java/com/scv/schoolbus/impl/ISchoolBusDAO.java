@@ -1,6 +1,6 @@
 package com.scv.schoolbus.impl;
 
-public class ISchoolBusDAO
+public interface ISchoolBusDAO
 {
 
 }

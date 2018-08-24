@@ -1,6 +1,6 @@
 package com.scv.jobreport.impl;
 
-public class IJobReportDAO
+public interface IJobReportDAO
 {
 
 }
