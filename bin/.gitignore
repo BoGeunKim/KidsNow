@@ -1,0 +1,8 @@
+.settings
+.classpath
+.springbeans
+.project
+*.MF
+*.properties
+*.class
+*.log

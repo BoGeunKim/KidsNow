@@ -26,7 +26,7 @@
 	<context:component-scan base-package="com.scv.parent"/>
 	<context:component-scan base-package="com.scv.teacher"/> -->
 	
-	<context:component-scan base-package="com.scv.chief.impl"/>
-	<context:component-scan base-package="com.scv.chief.controller"></context:component-scan>
+	<context:component-scan base-package="com.scv.director.impl"/>
+	<context:component-scan base-package="com.scv.director.controller"></context:component-scan>
 	
 </beans:beans>

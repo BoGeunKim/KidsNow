@@ -28,32 +28,7 @@
         <property name="configLocation" value="classpath:/mybatis-config.xml" />
 
         <!-- SQL 파일의 위치를 지정합니다. -->
-        <property name="mapperLocations">
-        	<array>
-        		<value>classpath:com.scv.admin.mapper/*.xml</value>
-        		<value>classpath:com.scv.attend.mapper/*.xml</value>
-        		<value>classpath:com.scv.chief.mapper/*.xml</value>
-        		<value>classpath:com.scv.child.mapper/*.xml</value>
-        		<value>classpath:com.scv.childreport.mapper/*.xml</value>
-        		<value>classpath:com.scv.classes.mapper/*.xml</value>
-        		<value>classpath:com.scv.diet.mapper/*.xml</value>
-        		<value>classpath:com.scv.dispatch.mapper/*.xml</value>
-        		<value>classpath:com.scv.homereport.mapper/*.xml</value>
-        		<value>classpath:com.scv.jobreport.mapper/*.xml</value>
-        		<value>classpath:com.scv.leave.mapper/*.xml</value>
-        		<value>classpath:com.scv.med.mapper/*.xml</value>
-        		<value>classpath:com.scv.notice.mapper/*.xml</value>
-        		<value>classpath:com.scv.photoboard.mapper/*.xml</value>
-        		<value>classpath:com.scv.route.mapper/*.xml</value>
-        		<value>classpath:com.scv.school.mapper/*.xml</value>
-        		<value>classpath:com.scv.schoolbus.mapper/*.xml</value>
-        		<value>classpath:com.scv.sinfomenu.mapper/*.xml</value>
-        		<value>classpath:com.scv.station.mapper/*.xml</value>
-        		<value>classpath:com.scv.user.mapper/*.xml</value>
-        		<value>classpath:com.scv.workorder.mapper/*.xml</value>
-        	</array>
-        </property>
-        
+        <property name="mapperLocations" value="classpath:com/scv/director/mapper/*.xml" />
     </bean>
 
     <!-- SqlSession -->
@@ -63,7 +38,7 @@
 
     <!-- 지정된 베이스 패키지에서 DAO(Mapper) 를  검색하여 등록합니다.-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-         <property name="basePackage" value="com.scv.chief.impl" />
+         <property name="basePackage" value="com.scv.director.impl" />
     </bean>
  	
     <!-- 트랜잭션 매니저 bean 을 등록합니다. -->

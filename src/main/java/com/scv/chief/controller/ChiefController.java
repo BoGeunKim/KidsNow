@@ -22,7 +22,6 @@ public class ChiefController {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	// mybatis ���� �׽�Ʈ
 	@RequestMapping(value="/test.do")
 	public String test(ModelMap map) {
 		IChiefDAO dao = sqlSession.getMapper(IChiefDAO.class);
