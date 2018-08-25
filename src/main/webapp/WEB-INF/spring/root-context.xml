@@ -30,7 +30,7 @@
         <!-- SQL 파일의 위치를 지정합니다. -->
         <property name="mapperLocations">
         	<array>
-        		<value>classpath:com.scv.admin.mapper/*.xml</value>
+        		<value>classpath:/com/scv/admin/mapper/*.xml</value>
         		<value>classpath:com.scv.attend.mapper/*.xml</value>
         		<value>classpath:com.scv.chief.mapper/*.xml</value>
         		<value>classpath:com.scv.child.mapper/*.xml</value>
@@ -63,7 +63,7 @@
 
     <!-- 지정된 베이스 패키지에서 DAO(Mapper) 를  검색하여 등록합니다.-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-         <property name="basePackage" value="com.scv.chief.impl" />
+         <property name="basePackage" value="com.scv.admin.impl" />
     </bean>
  	
     <!-- 트랜잭션 매니저 bean 을 등록합니다. -->
