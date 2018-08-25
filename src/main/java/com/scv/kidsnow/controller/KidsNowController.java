@@ -34,7 +34,8 @@ public class KidsNowController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "home";
+		return "first";
 	}
 	
 }
+
