@@ -5,9 +5,11 @@
 <mapper namespace="com.scv.director.impl.IDirectorDAO">
 	
 	<!-- 원장님 회원가입 -->
-	<insert id="userSignUp" statementType="CALLABLE" parameterType="com.scv.user.dto.UserDTO">
+	<insert id="userSignUp" statementType="CALLABLE" parameterType="hashmap">
 	{
-		call
+		call P_CHIEF_SIGNUP(#{userDto.genderCode}, #{userDto.userId}, #{userDto.userPw}
+			, #{userDto.userName}, #{userDto.userBirth}, #{userDto.userTel}, #{userDto.userFilePath}
+			, #{businessLicense}, #{schoolCode})
 	}
 	</insert>
 	
