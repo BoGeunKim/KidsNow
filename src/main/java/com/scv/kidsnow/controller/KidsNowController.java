@@ -23,9 +23,23 @@ public class KidsNowController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
+	@RequestMapping(value = "/knmain", method = RequestMethod.GET)
+	public String knMain(Locale locale, Model model) {
+		/*logger.info("Welcome home! The client locale is {}.", locale);*/
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "KnMain";
+	}
+	
 	@RequestMapping(value = "/hello11", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+		/*logger.info("Welcome home! The client locale is {}.", locale);*/
 		
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
@@ -36,6 +50,20 @@ public class KidsNowController {
 		
 		return "first";
 	}
+	@RequestMapping(value = "/loginform", method = RequestMethod.GET)
+	public String loginForm(Locale locale, Model model) {
+		/*logger.info("Welcome home! The client locale is {}.", locale);*/
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "KnLoginForm";
+	}
+
 	
 }
 
