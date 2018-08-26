@@ -1,1 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.scv.director.impl.IDirectorDAO">
+	
+	<!-- 식별번호로 어린이집 코드 찾기 -->
+	<select id="searchSCode" resultType="java.lang.Integer">
+		SELECT schoolcode
+		FROM school
+		WHERE sidentification = #{sIdentification}
+	</select>
+	
+	
+</mapper>

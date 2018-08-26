@@ -15,9 +15,9 @@ public class AdminController {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	@RequestMapping(value="/b.do")
+	@RequestMapping(value="/adminMain.do")
 	public String test(ModelMap map) {
 		
-		return "test";
+		return "admin/adminMain";
 	}
 }
