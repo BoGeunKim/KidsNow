@@ -69,9 +69,9 @@ public class UserController {
 			
 			req.getParameter("businessLicense");
 			
-			uDto.setDivCode(req.getParameter("divCode"));
-			uDto.setDivCode(req.getParameter("divCode"));
-			uDto.setDivCode(req.getParameter("divCode"));
+			//uDto.setDivCode(req.getParameter("divCode"));
+			//uDto.setDivCode(req.getParameter("divCode"));
+			//uDto.setDivCode(req.getParameter("divCode"));
 			
 			
 			
