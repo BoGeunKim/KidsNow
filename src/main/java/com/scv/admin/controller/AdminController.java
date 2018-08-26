@@ -21,30 +21,58 @@ public class AdminController {
 	@Autowired
 	private SqlSession sqlSession;
 	
+	/**
+	 * 메소드명 : index
+	 * 작성자 : qhrms
+	 * 작성일자 : 2018. 8. 26. 오후 4:31:01
+	 */
 	@RequestMapping(value="/adminMain.do")
 	public String index() {
 		
 		return "admin/adminMain";
 	}
 	
-	@RequestMapping(value="/adminLogin.do")
-	public String login()	{
+	/**
+	 * 메소드명 : login
+	 * 작성자 : qhrms
+	 * 작성일자 : 2018. 8. 26. 오후 4:31:05
+	 */
+	@RequestMapping(value="/login.do")
+	public String login(ModelMap mom, HttpSession session)	{
+		mom.addAttribute("adminCode", session.getAttribute("adminCode"));
+		
 		return "admin/adminLogin";
 	}
 	
+	/**
+	 * 메소드명 : loginCheck
+	 * 작성자 : qhrms
+	 * 작성일자 : 2018. 8. 26. 오후 4:31:07
+	 */
 	@SuppressWarnings("static-access")
-	@RequestMapping(value="/adminLoginCheck.do" , method = RequestMethod.POST)
+	@RequestMapping(value="/loginCheck.do" , method = RequestMethod.POST)
 	public String loginCheck(AdminDTO dto, HttpSession session){
 		
 		IAdminDAO dao = sqlSession.getMapper(IAdminDAO.class);
 		
-		System.out.println(dto.getAdminId());
-		System.out.println(dao.loginCheck(dto));
-		if (toString().valueOf(dao.loginCheck(dto)).equals(null)) {
-			session.setAttribute("adminId", dao.loginCheck(dto));
-			return "admin/adminMain";
+		if (!toString().valueOf(dao.loginCheck(dto)).equals(null)) {
+			session.setAttribute("adminCode", dao.loginCheck(dto));
+			return "redirect:adminMain.do";
 		}
 		
-		return "admin/adminLogin";
+		return "redirect:login.do";
+	}
+	
+	/**
+	 * 메소드명 : logout
+	 * 작성자 : qhrms
+	 * 작성일자 : 2018. 8. 26. 오후 4:31:12
+	 */
+	@RequestMapping(value="/logout.do")
+	public String logout(HttpSession session)
+	{
+		session.invalidate();
+		
+		return "redirect:login.do";
 	}
 }

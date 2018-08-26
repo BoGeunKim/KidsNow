@@ -79,16 +79,21 @@
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
         </li>
+       
+       <%-- <c:if test="${adminId==null }">
+            	<a class="btn btn-default" href="login.do">Login</a>	
+       </c:if> --%>
         <li class="nav-item dropdown no-arrow">
           <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-user-circle fa-fw"></i>
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-            <a class="dropdown-item" href="#">Settings</a>
-            <a class="dropdown-item" href="#">Activity Log</a>
-            <div class="dropdown-divider"></div>
+            <c:if test="${adminCode!=null }">
+            	<a class="dropdown-item" href="logout.do">Logout</a>
+            </c:if>
+           <!--  <div class="dropdown-divider"></div> -->
             <!-- <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a> -->
-            <a class="dropdown-item" href="adminLogin.do">Login</a>
+            <!-- <a class="dropdown-item" href="adminLogin.do">Login</a> -->
           </div>
         </li>
       </ul>

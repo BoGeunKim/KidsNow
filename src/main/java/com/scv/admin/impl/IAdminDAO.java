@@ -1,6 +1,5 @@
 package com.scv.admin.impl;
 
-import org.apache.ibatis.annotations.Param;
 
 import com.scv.admin.dto.AdminDTO;
 
