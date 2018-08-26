@@ -55,6 +55,9 @@
                   <div class="item"><img src="images/slider-image-3.jpg" alt="Mirror Edge"></div>
                   <div class="item"><img src="images/slider-image-2.jpg" alt="The Last of us"></div>
                   <div class="item"><img src="images/slider-image-1.jpg" alt="GTA V"></div>
+                  <div class="item"><img src="images/slider-image-3.jpg" alt="child1"></div>
+                  <div class="item"><img src="images/slider-image-2.jpg" alt="child2"></div>
+                  <div class="item"><img src="images/slider-image-1.jpg" alt="child3"></div>
                  
                 </div>
             </div>
