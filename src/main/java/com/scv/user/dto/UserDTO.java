@@ -1,5 +1,10 @@
 package com.scv.user.dto;
 
+/**
+	 * 클래스명 : UserDTO
+	 * 작성자 : jinhy
+	 * 작성일자 : 2018. 8. 27. 오후 12:09:07
+	 */
 public class UserDTO
 {
 	// 계정코드, 구분코드, 성별코드

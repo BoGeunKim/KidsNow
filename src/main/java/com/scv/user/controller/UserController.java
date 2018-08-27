@@ -26,28 +26,48 @@ public class UserController {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	// 원장님, 선생님, 학부모 로그인
+	/**
+		* 메소드명 : 
+		* 작성자 : jinhy
+		* 작성일자 : 2018. 8. 27. 오후 12:12:59
+		* 메소드설명 :  원장님, 선생님, 학부모 로그인
+	*/
 	@RequestMapping(value="/test19.do")
 	public String test(ModelMap map) {
 		
 		return "test";
 	}
 	
-	// 학부모 회원가입 폼
+	/**
+		* 메소드명 : ParentSignupForm
+		* 작성자 : jinhy
+		* 작성일자 : 2018. 8. 27. 오후 12:12:52
+		* 메소드설명 :  학부모 회원가입 폼
+	*/
 	@RequestMapping(value="/parentSignupForm")
 	public String ParentSignupForm(ModelMap map) {
 		
 		return "signup/parentSignupForm";
 	}
 	
-	// 원장님 회원가입 폼
+	/**
+		* 메소드명 : 
+		* 작성자 : jinhy
+		* 작성일자 : 2018. 8. 27. 오후 12:12:44
+		* 메소드설명 : 원장님 회원가입 폼 
+	*/
 	@RequestMapping(value="/chiefSignupForm")
 	public String ChiefSignupForm(ModelMap map) {
 		
 		return "signup/chiefSignupForm";
 	}
 	
-	// 원장님 회원가입
+	/**
+		* 메소드명 : ChiefSignup
+		* 작성자 : jinhy
+		* 작성일자 : 2018. 8. 27. 오후 12:11:51
+		* 메소드설명 :  원장님 회원가입
+	*/
 	@RequestMapping(value="chiefSinup")
 	public String ChiefSignup(HttpServletRequest request, HttpSession session)
 	{
@@ -100,7 +120,12 @@ public class UserController {
 		return "회원가입완료페이지이동시키기!!";
 	}
 	
-	// 선생님 회원가입
+	/**
+		* 메소드명 : TeacherSignupForm
+		* 작성자 : jinhy
+		* 작성일자 : 2018. 8. 27. 오후 12:12:26
+		* 메소드설명 : 선생님회원가입
+	*/
 	@RequestMapping(value="/teacherSignupForm")
 	public String TeacherSignupForm(ModelMap map) {
 		
