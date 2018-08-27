@@ -126,7 +126,7 @@ public class UserController {
 		* 작성일자 : 2018. 8. 27. 오후 12:12:26
 		* 메소드설명 : 선생님회원가입
 	*/
-	@RequestMapping(value="/teacherSignupForm")
+	@RequestMapping(value="/teacherSignup")
 	public String teacherSignup(HttpServletRequest request, HttpSession session) {
 		
 		//=================================================
@@ -182,7 +182,7 @@ public class UserController {
 	* 작성일자 : 2018. 8. 27. 오후 13:09:26
 	* 메소드설명 : 학부모회원가입
 	*/
-	@RequestMapping(value="/teacherSignupForm")
+	@RequestMapping(value="/parentSignup")
 	public String parentSignup(HttpServletRequest request, HttpSession session) {
 		
 		//=================================================

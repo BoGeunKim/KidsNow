@@ -6,7 +6,7 @@
 	
 	<!-- 회원가입구분 -->
 	
-	
+	<!-- 성별 -->
 	
 	<!-- 원장님 회원가입 -->
 	<insert id="chiefSignUp" statementType="CALLABLE" parameterType="hashmap">

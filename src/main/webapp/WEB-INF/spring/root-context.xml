@@ -31,26 +31,26 @@
         <property name="mapperLocations">
         	<array>
         		<value>classpath:/com/scv/admin/mapper/*.xml</value>
-        		<value>classpath/com/scv/attend/mapper/*.xml</value>
-        		<value>classpath/com/scv/chief/mapper/*.xml</value>
-        		<value>classpath/com/scv/child/mapper/*.xml</value>
-        		<value>classpath/com/scv/childreport/mapper/*.xml</value>
-        		<value>classpath/com/scv/classes/mapper/*.xml</value>
-        		<value>classpath/com/scv/diet/mapper/*.xml</value>
-        		<value>classpath/com/scv/dispatch/mapper/*.xml</value>
-        		<value>classpath/com/scv/homereport/mapper/*.xml</value>
-        		<value>classpath/com/scv/jobreport/mapper/*.xml</value>
-        		<value>classpath/com/scv/leave/mapper/*.xml</value>
-        		<value>classpath/com/scv/med/mapper/*.xml</value>
-        		<value>classpath/com/scv/notice/mapper/*.xml</value>
-        		<value>classpath/com/scv/photoboard/mapper/*.xml</value>
-        		<value>classpath/com/scv/route/mapper/*.xml</value>
-        		<value>classpath/com/scv/school/mapper/*.xml</value>
-        		<value>classpath/com/scv/schoolbus/mapper/*.xml</value>
-        		<value>classpath/com/scv/sinfomenu/mapper/*.xml</value>
-        		<value>classpath/com/scv/station/mapper/*.xml</value>
-        		<value>classpath/com/scv/user/mapper/*.xml</value>
-        		<value>classpath/com/scv/workorder/mapper/*.xml</value>
+        		<value>classpath:com/scv/attend/mapper/*.xml</value>
+        		<value>classpath:com/scv/chief/mapper/*.xml</value>
+        		<value>classpath:com/scv/child/mapper/*.xml</value>
+        		<value>classpath:com/scv/childreport/mapper/*.xml</value>
+        		<value>classpath:com/scv/classes/mapper/*.xml</value>
+        		<value>classpath:com/scv/diet/mapper/*.xml</value>
+        		<value>classpath:com/scv/dispatch/mapper/*.xml</value>
+        		<value>classpath:com/scv/homereport/mapper/*.xml</value>
+        		<value>classpath:com/scv/jobreport/mapper/*.xml</value>
+        		<value>classpath:com/scv/leave/mapper/*.xml</value>
+        		<value>classpath:com/scv/med/mapper/*.xml</value>
+        		<value>classpath:com/scv/notice/mapper/*.xml</value>
+        		<value>classpath:com/scv/photoboard/mapper/*.xml</value>
+        		<value>classpath:com/scv/route/mapper/*.xml</value>
+        		<value>classpath:com/scv/school/mapper/*.xml</value>
+        		<value>classpath:com/scv/schoolbus/mapper/*.xml</value>
+        		<value>classpath:com/scv/sinfomenu/mapper/*.xml</value>
+        		<value>classpath:com/scv/station/mapper/*.xml</value>
+        		<value>classpath:com/scv/user/mapper/*.xml</value>
+        		<value>classpath:com/scv/workorder/mapper/*.xml</value>
         	</array>
         </property>
         
