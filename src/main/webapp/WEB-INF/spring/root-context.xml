@@ -74,4 +74,8 @@
      <!-- 아노테이션 기반의 트랜잭션을 사용합니다. -->
      <tx:annotation-driven transaction-manager="transactionManager"/>
 	
+	<!-- validator 메세지 다국어 처리 -->
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+    	<property name="validationMessageSource" ref="messageSource" />
+	</bean>
 </beans>
