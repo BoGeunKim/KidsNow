@@ -54,11 +54,6 @@ $(document).ready(function() {
     $('.more-jobs a').click(function(){
       $('.table tr.hide-jobs').toggle();
     });
-
-
  
 })
 
-// Initializing WOW.JS
-
- new WOW().init();
