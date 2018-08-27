@@ -4,8 +4,12 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.scv.director.impl.IDirectorDAO">
 	
+	<!-- 회원가입구분 -->
+	
+	
+	
 	<!-- 원장님 회원가입 -->
-	<insert id="userSignUp" statementType="CALLABLE" parameterType="hashmap">
+	<insert id="chiefSignUp" statementType="CALLABLE" parameterType="hashmap">
 	{
 		call P_CHIEF_SIGNUP(#{userDto.genderCode}, #{userDto.userId}, #{userDto.userPw}
 			, #{userDto.userName}, #{userDto.userBirth}, #{userDto.userTel}, #{userDto.userFilePath}
@@ -14,16 +18,20 @@
 	</insert>
 	
 	<!-- 선생님 회원가입 -->
-	<insert id="" statementType="CALLABLE">
+	<insert id="teacherSignup" statementType="CALLABLE" parameterType="hashmap">
 	{
-		call
+		call P_TEA_SIGNUP(#{userDto.genderCode}, #{userDto.userId}, #{userDto.userPw}
+			, #{userDto.userName}, #{userDto.userBirth}, #{userDto.userTel}, #{userDto.userFilePath}
+			, #{schoolCode})
 	}
 	</insert>
 	
 	<!-- 학부모 회원가입 -->
-	<insert id="" statementType="CALLABLE">
+	<insert id="parentSignup" statementType="CALLABLE" parameterType="hashmap">
 	{
-		call
+		call P_TEA_SIGNUP(#{userDto.genderCode}, #{userDto.userId}, #{userDto.userPw}
+			, #{userDto.userName}, #{userDto.userBirth}, #{userDto.userTel}, #{userDto.userFilePath}
+			, #{childCode})
 	}
 	</insert>
 	

@@ -27,49 +27,49 @@ public class UserController {
 	private SqlSession sqlSession;
 	
 	/**
-		* 메소드명 : 
-		* 작성자 : jinhy
-		* 작성일자 : 2018. 8. 27. 오후 12:12:59
-		* 메소드설명 :  원장님, 선생님, 학부모 로그인
-	*/
-	@RequestMapping(value="/test19.do")
-	public String test(ModelMap map) {
-		
-		return "test";
-	}
-	
-	/**
-		* 메소드명 : ParentSignupForm
+		* 메소드명 : parentSignupForm
 		* 작성자 : jinhy
 		* 작성일자 : 2018. 8. 27. 오후 12:12:52
-		* 메소드설명 :  학부모 회원가입 폼
+		* 메소드설명 : 학부모 회원가입 폼
 	*/
 	@RequestMapping(value="/parentSignupForm")
-	public String ParentSignupForm(ModelMap map) {
+	public String parentSignupForm(ModelMap map) {
 		
 		return "signup/parentSignupForm";
 	}
 	
 	/**
-		* 메소드명 : 
+		* 메소드명 : chiefSignupForm
 		* 작성자 : jinhy
 		* 작성일자 : 2018. 8. 27. 오후 12:12:44
 		* 메소드설명 : 원장님 회원가입 폼 
 	*/
 	@RequestMapping(value="/chiefSignupForm")
-	public String ChiefSignupForm(ModelMap map) {
+	public String chiefSignupForm(ModelMap map) {
 		
 		return "signup/chiefSignupForm";
 	}
 	
 	/**
-		* 메소드명 : ChiefSignup
+		* 메소드명   : teacherSignupForm
+		* 작성자     : jinhy
+		* 작성일자   : 2018. 8. 27. 오후 1:09:48
+		* 메소드설명 : 선생님 회원가입 폼
+	*/
+	@RequestMapping(value="/teacherSignupForm")
+	public String teacherSignupForm(ModelMap map) {
+		
+		return "signup/teacherSignupForm";
+	}
+	
+	/**
+		* 메소드명 : chiefSignup
 		* 작성자 : jinhy
 		* 작성일자 : 2018. 8. 27. 오후 12:11:51
 		* 메소드설명 :  원장님 회원가입
 	*/
 	@RequestMapping(value="chiefSinup")
-	public String ChiefSignup(HttpServletRequest request, HttpSession session)
+	public String chiefSignup(HttpServletRequest request, HttpSession session)
 	{
 		//=================================================
 		//System.out.println(user_id);
@@ -121,14 +121,114 @@ public class UserController {
 	}
 	
 	/**
-		* 메소드명 : TeacherSignupForm
+		* 메소드명 : teacherSignup
 		* 작성자 : jinhy
 		* 작성일자 : 2018. 8. 27. 오후 12:12:26
 		* 메소드설명 : 선생님회원가입
 	*/
 	@RequestMapping(value="/teacherSignupForm")
-	public String TeacherSignupForm(ModelMap map) {
+	public String teacherSignup(HttpServletRequest request, HttpSession session) {
 		
-		return "signup/teacherSignupForm";
+		//=================================================
+		//System.out.println(user_id);
+		String root = session.getServletContext().getRealPath("/");
+		String savePath = "resource/upload/user_profile/";
+		
+		File dir = new File(root + savePath);
+
+		if (!dir.exists())
+			dir.mkdirs();
+		
+		String encType = "utf-8";
+		int maxFileSize = 5 * 1024 * 1024;
+		
+		try
+		{
+			MultipartRequest req = null;
+			req = new MultipartRequest(request, root+savePath, maxFileSize, encType, new DefaultFileRenamePolicy());
+			
+			String profile_oriName = req.getOriginalFileName("userFilePath");
+			//File saveFile = new File(root + savePath + profile_oriName);
+			UserDTO userDto = new UserDTO();
+			userDto.setDivCode(Integer.parseInt(req.getParameter("divCode")));
+			userDto.setGenderCode(Integer.parseInt(req.getParameter("genderCode")));
+			userDto.setUserId(req.getParameter("userId"));
+			userDto.setUserPw(req.getParameter("userPw"));
+			userDto.setUserName(req.getParameter("userName"));
+			userDto.setUserBirth(req.getParameter("userBirth"));
+			userDto.setUserTel(req.getParameter("userTel"));
+			userDto.setUserFilePath(savePath+profile_oriName);
+			
+			int schoolCode = Integer.parseInt(req.getParameter("schoolCode"));
+			
+			IUserDAO dao = sqlSession.getMapper(IUserDAO.class);
+			
+			HashMap<String, Object> map = new HashMap<String, Object>();
+			map.put("userDto", userDto);
+			map.put("schoolCode", schoolCode);
+			
+			// 회원가입 진행~~
+			dao.teacherSignup(map);
+		}catch (Exception e) {
+			System.out.println(e.toString());
+		}
+		
+		return "회원가입완료페이지이동시키기!!";
+	}
+	
+	/**
+	* 메소드명 : parentSignup
+	* 작성자 : jinhy
+	* 작성일자 : 2018. 8. 27. 오후 13:09:26
+	* 메소드설명 : 학부모회원가입
+	*/
+	@RequestMapping(value="/teacherSignupForm")
+	public String parentSignup(HttpServletRequest request, HttpSession session) {
+		
+		//=================================================
+		//System.out.println(user_id);
+		String root = session.getServletContext().getRealPath("/");
+		String savePath = "resource/upload/user_profile/";
+		
+		File dir = new File(root + savePath);
+	
+		if (!dir.exists())
+			dir.mkdirs();
+		
+		String encType = "utf-8";
+		int maxFileSize = 5 * 1024 * 1024;
+		
+		try
+		{
+			MultipartRequest req = null;
+			req = new MultipartRequest(request, root+savePath, maxFileSize, encType, new DefaultFileRenamePolicy());
+			
+			String profile_oriName = req.getOriginalFileName("userFilePath");
+			//File saveFile = new File(root + savePath + profile_oriName);
+			UserDTO userDto = new UserDTO();
+			userDto.setDivCode(Integer.parseInt(req.getParameter("divCode")));
+			userDto.setGenderCode(Integer.parseInt(req.getParameter("genderCode")));
+			userDto.setUserId(req.getParameter("userId"));
+			userDto.setUserPw(req.getParameter("userPw"));
+			userDto.setUserName(req.getParameter("userName"));
+			userDto.setUserBirth(req.getParameter("userBirth"));
+			userDto.setUserTel(req.getParameter("userTel"));
+			userDto.setUserFilePath(savePath+profile_oriName);
+			
+			int childCode = Integer.parseInt(req.getParameter("childCode"));
+			
+			IUserDAO dao = sqlSession.getMapper(IUserDAO.class);
+			
+			HashMap<String, Object> map = new HashMap<String, Object>();
+			map.put("userDto", userDto);
+			map.put("childCode", childCode);
+			
+			// 회원가입 진행~~
+			dao.parentSignup(map);
+		}catch (Exception e) {
+			System.out.println(e.toString());
+		}
+		
+		return "회원가입완료페이지이동시키기!!";
 	}
 }
