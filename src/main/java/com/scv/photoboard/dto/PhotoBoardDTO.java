@@ -7,8 +7,8 @@ package com.scv.photoboard.dto;
 public class PhotoBoardDTO
 {
 	// 활동사진게시판코드
-	int photoBoardCode;
-	String pBSubject, pBContent, pBRegDate;
+	private int photoBoardCode;
+	private String pBSubject, pBContent, pBRegDate;
 	
 	
 	public int getPhotoBoardCode()

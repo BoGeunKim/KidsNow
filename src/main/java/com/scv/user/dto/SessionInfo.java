@@ -6,9 +6,9 @@ package com.scv.user.dto;
  */
 public class SessionInfo
 {
-	int userCode;		//-- 유저코드
-	String userName;	//-- 유저명	
-	int divCode;		//-- 유저구분코드
+	private int userCode;		//-- 유저코드
+	private String userName;	//-- 유저명	
+	private int divCode;		//-- 유저구분코드
 	public int getUserCode()
 	{
 		return userCode;

@@ -7,6 +7,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.scv.admin.impl.IAdminDAO;
+import com.scv.chief.impl.IChiefDAO;
 import com.scv.user.impl.IUserDAO;
 
 /**
@@ -18,28 +19,21 @@ public class ChiefController {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	// 관리자 아이디 비밀번호 확인메소드
-	@RequestMapping(value="/test22.do")
-	public String checkAdminLogin(ModelMap map) {
+	// 선생님 승인내역보기
+	/**
+		* 메소드명   : getTeaSignupList
+		* 작성자     : jinhy
+		* 작성일자   : 2018. 8. 27. 오후 4:49:11
+		* 메소드설명 : 선생님가입신청 내역 조회
+	*/
+	@RequestMapping("/listTeacherSignup")
+	public String getTeaSignupList(ModelMap map)
+	{
+		IChiefDAO dao = sqlSession.getMapper(IChiefDAO.class);
 		
-		// 아이디, 비밀번호 체크
-		IAdminDAO dao = sqlSession.getMapper(IAdminDAO.class);
+		map.addAttribute("teaSignupList",dao.getTeaSignupList());
 		
-		int flagAdminInfo = 0;
-		//flagAdminInfo = dao.checkAdminLogin();
-		
-		// 회원정보(ID, PW) 없을 경우
-		if(flagAdminInfo == 0)
-		{
-			return "";
-		}
-		// 세션저장
-		IUserDAO sessionDao = sqlSession.getMapper(IUserDAO.class);
-		
-		
-		map.addAttribute("hh", "테스트");
-		
-		
-		return "test";
+		return "가입신청리스트페이지";
 	}
+	
 }

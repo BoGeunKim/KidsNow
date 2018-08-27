@@ -4,9 +4,22 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.scv.director.impl.IDirectorDAO">
 	
-	<!-- 회원가입구분 -->
+	<!-- 아이디 중복확인 -->
+	<select id="userIdCheck" resultType="java.lang.Integer">
+		SELECT COUNT(*)
+		FROM USERINFO
+		WHERE USER_ID = #{userId}
+		UNION
+		SELECT COUNT(*)
+		FROM DROPUSER
+		WHERE USER_ID = #{userId}
+	</select>
 	
 	<!-- 성별 -->
+	<select id="getGender" resultType="com.scv.user.dto.GenderDTO">
+		SELECT gender_code, gender_name
+		FROM gender
+	</select>
 	
 	<!-- 원장님 회원가입 -->
 	<insert id="chiefSignUp" statementType="CALLABLE" parameterType="hashmap">
@@ -26,6 +39,27 @@
 	}
 	</insert>
 	
+	<!-- 학부모가 원아 식별코드 입력했을 경우 -->
+	<select id="getChildInfo" resultType="com.scv.user.vo.ChildInfoVO">
+		SELECT C.CHILD_NAME, C.CHILD_BIRTH, SCHOOL.SCHOOL_NAME, CLASS.CLASS_NAME, C.GUARDIAN_NAME, C.ER_TEL1, C.ER_TEL2, C.CHILD_ADDR
+		FROM CHILD C 
+		    LEFT JOIN GENDER G
+		        ON C.GENDER_CODE = G.GENDER_CODE
+		    LEFT JOIN STAFF S
+		        ON C.STAFF_CODE = S.STAFF_CODE
+		    LEFT JOIN CHIEFSIGNUPOK COK
+		        ON C.STAFF_CODE = COK.STAFF_CODE
+		    LEFT JOIN CSIGNUPCHECK CCK
+		        ON COK.C_SIGNUP_CK_CODE = CCK.C_SIGNUP_CK_CODE
+		    LEFT JOIN CHIEFSIGNUP CSU
+		        ON CCK.C_SIGNUP_CODE = CCK.C_SIGNUP_CODE
+		    LEFT JOIN SCHOOL
+		        ON CSU.SCHOOL_CODE = SCHOOL.SCHOOL_CODE
+		    LEFT JOIN CLASS
+		        ON C.CLASS_CODE = CLASS.CLASS_CODE
+		WHERE C.CHILD_IDENTIFY_CODE = #{childIdentifyCode}
+	</select>
+	
 	<!-- 학부모 회원가입 -->
 	<insert id="parentSignup" statementType="CALLABLE" parameterType="hashmap">
 	{
@@ -35,7 +69,10 @@
 	}
 	</insert>
 	
-	<!-- 회원탈퇴 -->
 	
+	
+	
+	
+	<!-- 회원탈퇴 -->
 	
 </mapper>

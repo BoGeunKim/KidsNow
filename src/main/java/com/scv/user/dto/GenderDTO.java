@@ -6,8 +6,8 @@ package com.scv.user.dto;
  */
 public class GenderDTO
 {
-	int genderCode;			//-- 성별코드
-	String genderName;		//-- 성별명
+	private int genderCode;			//-- 성별코드
+	private String genderName;		//-- 성별명
 	
 	public int getGenderCode()
 	{

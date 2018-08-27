@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 유효성 검증 빈 등록 -->
+<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+     
+<!-- 어노테이션으로 유효성 관리 -->
+<mvc:annotation-driven validator="validator">
+
+
+
+</mvc:annotation-driven></bean>
+

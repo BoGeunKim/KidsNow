@@ -6,8 +6,8 @@ package com.scv.user.dto;
  */
 public class UserDivDTO
 {
-	int divCode;		//-- 회원구분코드
-	String divName;		//-- 회원구문명
+	private int divCode;		//-- 회원구분코드
+	private String divName;		//-- 회원구문명
 	
 	public int getDivCode()
 	{

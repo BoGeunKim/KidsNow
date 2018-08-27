@@ -16,7 +16,7 @@ public class SchoolController {
 	private SqlSession sqlSession;
 	
 	@RequestMapping(value="/test15.do")
-	public String test(ModelMap map) {
+	public String schoolList(ModelMap map) {
 		
 		return "test";
 	}
