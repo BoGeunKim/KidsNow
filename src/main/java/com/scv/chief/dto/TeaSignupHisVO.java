@@ -7,10 +7,10 @@ package com.scv.chief.dto;
 	 * 클래스 설명 : 선생님가입신청 내역 DTO
 	 */
 public class TeaSignupHisVO {
-	
-	private int rowNum;
-	private String userName, userBirth, userTel;
+	private int rowNum, tSignupCode;
+	private String genderName, userName, userBirth, userTel;
 	private String signupDate;
+	
 	public int getRowNum()
 	{
 		return rowNum;
@@ -18,6 +18,22 @@ public class TeaSignupHisVO {
 	public void setRowNum(int rowNum)
 	{
 		this.rowNum = rowNum;
+	}
+	public int gettSignupCode()
+	{
+		return tSignupCode;
+	}
+	public void settSignupCode(int tSignupCode)
+	{
+		this.tSignupCode = tSignupCode;
+	}
+	public String getGenderName()
+	{
+		return genderName;
+	}
+	public void setGenderName(String genderName)
+	{
+		this.genderName = genderName;
 	}
 	public String getUserName()
 	{
