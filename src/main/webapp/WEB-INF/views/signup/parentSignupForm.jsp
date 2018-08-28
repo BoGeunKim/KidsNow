@@ -3,6 +3,8 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 	String cp = request.getContextPath();
+	
+	
 %>
 <!DOCTYPE html>
 <html>
@@ -182,6 +184,7 @@
 			<hr>
 		</div>
 	</div>
+	
 	
 </body>
 </html>
