@@ -24,80 +24,16 @@
 	<interceptors>
 		<interceptor>
 			<mapping path="/**" />
+			<exclude-mapping path="/loginCheck.do"/>
+			<exclude-mapping path="/login.do"/>
 			<beans:bean class="com.scv.common.interceptors.Interceptor" />
 		</interceptor>
 	</interceptors>
 	
-		
 	<!-- <context:component-scan base-package="com.scv.kidsnow" />
 	<context:component-scan base-package="com.scv.director"/>
 	<context:component-scan base-package="com.scv.parent"/>
 	<context:component-scan base-package="com.scv.teacher"/> -->
 	
-	<context:component-scan base-package="com.scv.admin.impl"/>	
-	<context:component-scan base-package="com.scv.admin.controller"/>
-	
-	<context:component-scan base-package="com.scv.attend.impl"/>
-	<context:component-scan base-package="com.scv.attend.controller"/>
-	
-	<context:component-scan base-package="com.scv.chief.impl"/>
-	<context:component-scan base-package="com.scv.chief.controller"/>
-	
-	<context:component-scan base-package="com.scv.child.impl"/>
-	<context:component-scan base-package="com.scv.child.controller"/>
-	
-	<context:component-scan base-package="com.scv.childreport.impl"/>
-	<context:component-scan base-package="com.scv.childreport.controller"/>
-	
-	<context:component-scan base-package="com.scv.classes.impl"/>
-	<context:component-scan base-package="com.scv.classes.controller"/>
-	
-	<context:component-scan base-package="com.scv.diet.impl"/>
-	<context:component-scan base-package="com.scv.diet.controller"/>
-	
-	<context:component-scan base-package="com.scv.dispatch.impl"/>
-	<context:component-scan base-package="com.scv.dispatch.controller"/>
-	
-	<context:component-scan base-package="com.scv.homereport.impl"/>
-	<context:component-scan base-package="com.scv.homereport.controller"/>
-	
-	<context:component-scan base-package="com.scv.jobreport.impl"/>
-	<context:component-scan base-package="com.scv.jobreport.controller"/>
-	
-	<context:component-scan base-package="com.scv.kidsnow.impl"/>
-	<context:component-scan base-package="com.scv.kidsnow.controller"/>
-	
-	<context:component-scan base-package="com.scv.leave.impl"/>
-	<context:component-scan base-package="com.scv.leave.controller"/>
-	
-	<context:component-scan base-package="com.scv.med.impl"/>
-	<context:component-scan base-package="com.scv.med.controller"/>
-	
-	<context:component-scan base-package="com.scv.notice.impl"/>
-	<context:component-scan base-package="com.scv.notice.controller"/>
-	
-	<context:component-scan base-package="com.scv.photoboard.impl"/>
-	<context:component-scan base-package="com.scv.photoboard.controller"/>
-	
-	<context:component-scan base-package="com.scv.route.impl"/>
-	<context:component-scan base-package="com.scv.route.controller"/>
-	
-	<context:component-scan base-package="com.scv.school.impl"/>
-	<context:component-scan base-package="com.scv.school.controller"/>
-	
-	<context:component-scan base-package="com.scv.schoolbus.impl"/>
-	<context:component-scan base-package="com.scv.schoolbus.controller"/>
-	
-	<context:component-scan base-package="com.scv.sinfomenu.impl"/>
-	<context:component-scan base-package="com.scv.sinfomenu.controller"/>
-	
-	<context:component-scan base-package="com.scv.station.impl"/>
-	<context:component-scan base-package="com.scv.station.controller"/>
-	
-	<context:component-scan base-package="com.scv.user.impl"/>
-	<context:component-scan base-package="com.scv.user.controller"/>
-	
-	<context:component-scan base-package="com.scv.workorder.impl"/>
-	<context:component-scan base-package="com.scv.workorder.controller"/>
-	
+	<context:component-scan base-package="com.scv.*"/>	
 </beans:beans>
