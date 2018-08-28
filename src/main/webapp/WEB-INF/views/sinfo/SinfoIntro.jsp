@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>sinfo_song.jsp</title>
+<title>SinfoIntro.jsp</title>
 <meta charset="UTF-8">
 <meta name="description" content="Colo Shop Template">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,7 +24,7 @@
 <div class="super_container">
 
 	<!-- Header -->
-	<c:import url="s_up.jsp"></c:import>
+	<c:import url="../SchoolUp.jsp"></c:import>
 
 	<div class="container product_section_container">
 		<div class="row">
@@ -33,8 +33,8 @@
 				<!-- 현 위치 -->
 				<div class="breadcrumbs d-flex flex-row align-items-center">
 					<ul>
-						<li><a href="sinfo_intro.do">유치원 소개</a></li>
-						<li class="active"><a href="sinfo_song.do"><i class="fa fa-angle-right" aria-hidden="true"></i>원가</a></li>
+						<li><a href="SinfoIntro.do">유치원 소개</a></li>
+						<li class="active"><a href="SinfoIntro.do"><i class="fa fa-angle-right" aria-hidden="true"></i>원장님 인사말</a></li>
 					</ul>
 				</div>
 
@@ -46,20 +46,20 @@
 							<h5>유치원 소개</h5>
 						</div>
 						<ul class="sidebar_categories">
-							<li><a href="sinfo_intro.do">원장님 인사말</a></li>
-							<li><a href="sinfo_history.do">연혁</a></li>
-							<li><a href="sinfo_symbol.do">원훈 및 상징</a></li>
-							<li class="active"><a href="sinfo_song.do"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>원가</a></li>
-							<li><a href="sinfo_condition.do">유치원 현황</a></li>
-							<li><a href="sinfo_loc.do">찾아오시는 길</a></li>
-							<li><a href="sinfo_list.do">목록 수정</a></li>
+							<li class="active"><a href="SinfoIntro.do"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>원장님 인사말</a></li>
+							<li><a href="SinfoHistory.do">연혁</a></li>
+							<li><a href="SinfoSymbol.do">원훈 및 상징</a></li>
+							<li><a href="SinfoSong.do">원가</a></li>
+							<li><a href="SinfoCondition.do">유치원 현황</a></li>
+							<li><a href="SinfoLoc.do">찾아오시는 길</a></li>
+							<li><a href="SinfoList.do">목록 수정</a></li>
 						</ul>
 					</div>
 					
 				</div>
 
 				<!-- Main Content -->
-				
+
 				<div class="main_content">
 
 					<!-- 이미지 -->
@@ -67,7 +67,7 @@
 					<div class="products_iso">
 						<div class="row">
 							<div class="col">
-								<img alt="" src="images/sinfo_song.png">
+								<img alt="" src="images/sinfo_intro.jpg">
 							</div>
 						</div>
 					</div>
@@ -78,40 +78,7 @@
 </div>
 		
 	<!-- Footer -->
-
-	<footer class="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="footer_nav_container d-flex flex-sm-row flex-column align-items-center justify-content-lg-start justify-content-center text-center">
-						<ul class="footer_nav">
-							<li><a href="#">Blog</a></li>
-							<li><a href="#">FAQs</a></li>
-							<li><a href="contact.html">Contact us</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="footer_social d-flex flex-row align-items-center justify-content-lg-end justify-content-center">
-						<ul>
-							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="footer_nav_container">
-						<div class="cr">©2018 All Rights Reserverd. Template by <a href="#">Colorlib</a> &amp; distributed by <a href="https://themewagon.com">ThemeWagon</a></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+	<c:import url="../KnFooter.jsp"></c:import>
 
 </div>
 
