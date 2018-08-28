@@ -37,145 +37,23 @@ public class KidsNowController {
 		return "KnMain";
 	}
 	
-	@RequestMapping(value = "/s_main", method = RequestMethod.GET)
-	public String s_main(Locale locale, Model model) {
-		/*logger.info("Welcome home! The client locale is {}.", locale);*/
+	// 유치원 메인
+	@RequestMapping(value = "/SchoolMain", method = RequestMethod.GET)
+	public String SchoolMain(Locale locale, Model model) {
 		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "s_main";
+		return "SchoolMain";
 	}
+	
+	// 통합로그인 페이지
 	@RequestMapping(value = "/loginform", method = RequestMethod.GET)
 	public String loginForm(Locale locale, Model model) {
-		/*logger.info("Welcome home! The client locale is {}.", locale);*/
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
 		
 		return "KnLoginForm";
 	}
+	
+	
 
 	
-	//유치원소개_원장인사말
-	@RequestMapping(value = "/sinfo_intro", method = RequestMethod.GET)
-	public String sinfo_intro(Locale locale, Model model) 
-	{
-		/*logger.info("Welcome home! The client locale is {}.", locale);*/
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "sinfo_intro";
-	}
-	
-	//유치원소개_연혁
-	@RequestMapping(value = "/sinfo_history", method = RequestMethod.GET)
-	public String sinfo_history(Locale locale, Model model) 
-	{
-		/*logger.info("Welcome home! The client locale is {}.", locale);*/
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "sinfo_history";
-	}
-	
-	//유치원소개_원훈 및 상징
-	@RequestMapping(value = "/sinfo_symbol", method = RequestMethod.GET)
-	public String sinfo_symbol(Locale locale, Model model) 
-	{
-		/*logger.info("Welcome home! The client locale is {}.", locale);*/
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "sinfo_symbol";
-	}
-	
-	//유치원소개_원가
-	@RequestMapping(value = "/sinfo_song", method = RequestMethod.GET)
-	public String sinfo_song(Locale locale, Model model) 
-	{
-		/*logger.info("Welcome home! The client locale is {}.", locale);*/
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "sinfo_song";
-	}
-	
-	//유치원소개_유치원현황
-	@RequestMapping(value = "/sinfo_condition", method = RequestMethod.GET)
-	public String sinfo_condition(Locale locale, Model model) 
-	{
-		/*logger.info("Welcome home! The client locale is {}.", locale);*/
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "sinfo_condition";
-	}
-	
-	//유치원소개_찾아오시는길
-	@RequestMapping(value = "/sinfo_loc", method = RequestMethod.GET)
-	public String sinfo_loc(Locale locale, Model model) 
-	{
-		/*logger.info("Welcome home! The client locale is {}.", locale);*/
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "sinfo_loc";
-	}
-	
-	//유치원소개_찾아오시는길
-	@RequestMapping(value = "/sinfo_list", method = RequestMethod.GET)
-	public String sinfo_list(Locale locale, Model model) 
-	{
-		/*logger.info("Welcome home! The client locale is {}.", locale);*/
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "sinfo_list";
-	}
 		
 	
 }
