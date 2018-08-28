@@ -5,33 +5,20 @@
 	String cp = request.getContextPath();
 %>
 <!DOCTYPE html>
-<html class="no-js">
+<html>
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>KnMain.jsp</title>
-<link
-	href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800'
-	rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" href="styles/normalize.css">
-<link rel="stylesheet" href="styles/font-awesome.min.css">
-<link rel="stylesheet" href="styles/fontello.css">
 <link rel="stylesheet" href="styles/animate.css">
 <link rel="stylesheet" href="styles/owl.carousel.css">
 <link rel="stylesheet" href="styles/owl.theme.css">
 <link rel="stylesheet" href="styles/owl.transitions.css">
 <link rel="stylesheet" href="styles/style.css">
-<link rel="stylesheet" href="styles/owl.responsive.css">
-<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script>
-	window.jQuery
-			|| document
-					.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
-</script>
-<script src="js/bootstrap.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>
 
@@ -40,22 +27,18 @@
 	background-color: #5bdab9;
 }
 
-.container{
+.container {
 	padding-left: 10%;
 }
-.logo_img
-{
-	width:80px; 
-	height: 40px;
 
+.logo_img {
+	width: 80px;
+	height: 40px;
 }
 </style>
 </head>
 <body>
-
-	<!-- Top Navigation 필요함! -->
-
-	<!-- Body content -->
+	<!-- Top content -->
 	<div class="slider-area">
 		<div class="slider">
 			<div id="bg-slider" class="owl-carousel owl-theme">
@@ -108,7 +91,7 @@
 
 	<!-- 메인페이지 body 영역 -->
 	<div class="container">
-		<div class="row page-title text-center">
+		<div class="">
 			<h1>유치원 조회·검색</h1>
 			<h5>kidsnow partners list</h5>
 			<h2>
@@ -140,131 +123,36 @@
 		</div>
 		<div class="row jobs">
 			<div class="col-md-9">
-				<div class="job-posts table-responsive">
-					<table class="table">
-						<tr class="">
-							<td class="tbl-title"><h4>
-									초롱별유치원 <br> <span class="job-type">국립</span>
-								</h4></td>
-							<td><p>dribbble community</p></td>
-							<td><p>
-									<i class="icon-location"></i>어린이집주소
-								</p></td>
-							<td class="tbl-apply"><a href="#">자세히보기</a></td>
-							<td class="tbl-apply"><a href="#">유치원페이지로 이동</a></td>
-						</tr>
-						<tr class="">
-							<td class="tbl-title"><h4>
-									초롱별유치원 <br> <span class="job-type">국립</span>
-								</h4></td>
-							<td><p>dribbble community</p></td>
-							<td><p>
-									<i class="icon-location"></i>어린이집주소
-								</p></td>
-							<td class="tbl-apply"><a href="#">자세히보기</a></td>
-							<td class="tbl-apply"><a href="#">유치원페이지로 이동</a></td>
-						</tr>
-						<tr class="">
-							<td class="tbl-title"><h4>
-									초롱별유치원 <br> <span class="job-type">국립</span>
-								</h4></td>
-							<td><p>dribbble community</p></td>
-							<td><p>
-									<i class="icon-location"></i>어린이집주소
-								</p></td>
-							<td class="tbl-apply"><a href="#">자세히보기</a></td>
-							<td class="tbl-apply"><a href="#">유치원페이지로 이동</a></td>
-						</tr>
-						<tr class="">
-							<td class="tbl-title"><h4>
-									초롱별유치원 <br> <span class="job-type">국립</span>
-								</h4></td>
-							<td><p>dribbble community</p></td>
-							<td><p>
-									<i class="icon-location"></i>어린이집주소
-								</p></td>
-							<td class="tbl-apply"><a href="#">자세히보기</a></td>
-							<td class="tbl-apply"><a href="#">유치원페이지로 이동</a></td>
-						</tr>
-						<tr class="">
-							<td class="tbl-title"><h4>
-									초롱별유치원 <br> <span class="job-type">국립</span>
-								</h4></td>
-							<td><p>dribbble community</p></td>
-							<td><p>
-									<i class="icon-location"></i>어린이집주소
-								</p></td>
-							<td class="tbl-apply"><a href="#">자세히보기</a></td>
-							<td class="tbl-apply"><a href="#">유치원페이지로 이동</a></td>
-						</tr>
-						<tr class="">
-							<td class="tbl-title"><h4>
-									초롱별유치원 <br> <span class="job-type">국립</span>
-								</h4></td>
-							<td><p>dribbble community</p></td>
-							<td><p>
-									<i class="icon-location"></i>어린이집주소
-								</p></td>
-							<td class="tbl-apply"><a href="#">자세히보기</a></td>
-							<td class="tbl-apply"><a href="#">유치원페이지로 이동</a></td>
-						</tr>
-						<tr class="">
-							<td class="tbl-title"><h4>
-									초롱별유치원 <br> <span class="job-type">국립</span>
-								</h4></td>
-							<td><p>dribbble community</p></td>
-							<td><p>
-									<i class="icon-location"></i>어린이집주소
-								</p></td>
-							<td class="tbl-apply"><a href="#">자세히보기</a></td>
-							<td class="tbl-apply"><a href="#">유치원페이지로 이동</a></td>
-						</tr>
-						<tr class="">
-							<td class="tbl-title"><h4>
-									초롱별유치원 <br> <span class="job-type">국립</span>
-								</h4></td>
-							<td><p>dribbble community</p></td>
-							<td><p>
-									<i class="icon-location"></i>어린이집주소
-								</p></td>
-							<td class="tbl-apply"><a href="#">자세히보기</a></td>
-							<td class="tbl-apply"><a href="#">유치원페이지로 이동</a></td>
-						</tr>
-						<tr class="">
-							<td class="tbl-title"><h4>
-									초롱별유치원 <br> <span class="job-type">국립</span>
-								</h4></td>
-							<td><p>dribbble community</p></td>
-							<td><p>
-									<i class="icon-location"></i>어린이집주소
-								</p></td>
-							<td class="tbl-apply"><a href="#">자세히보기</a></td>
-							<td class="tbl-apply"><a href="#">유치원페이지로 이동</a></td>
-						</tr>
-						<tr class="">
-							<td class="tbl-title"><h4>
-									초롱별유치원 <br> <span class="job-type">국립</span>
-								</h4></td>
-							<td><p>dribbble community</p></td>
-							<td><p>
-									<i class="icon-location"></i>어린이집주소
-								</p></td>
-							<td class="tbl-apply"><a href="#">자세히보기</a></td>
-							<td class="tbl-apply"><a href="#">유치원페이지로 이동</a></td>
-						</tr>
-						<tr class="">
-							<td class="tbl-title"><h4>
-									초롱별유치원 <br> <span class="job-type">국립</span>
-								</h4></td>
-							<td><p>dribbble community</p></td>
-							<td><p>
-									<i class="icon-location"></i>어린이집주소
-								</p></td>
-							<td class="tbl-apply"><a href="#">자세히보기</a></td>
-							<td class="tbl-apply"><a href="#">유치원페이지로 이동</a></td>
-						</tr>
-					</table>
-				</div>
+				<table class="table table-striped">
+					<tr>
+						<th>어린이집/유치원명</th>
+						<th>설립유형</th>
+						<th>주소</th>
+						<th>유치원정보</th>
+						<th>유치원페이지</th>
+					</tr>
+					<tr>
+						<td>소망유치원</td>
+						<td>사설</td>
+						<td>인천시 미추홀구 경원대로 717</td>
+						<td><button class="btn">보기</button></td>
+						<td><button class="btn">이동</button></td>
+					</tr>
+					<tr>
+						<td>소망유치원</td>
+						<td>사설</td>
+						<td>인천시 미추홀구 경원대로 717</td>
+						<td><button class="btn">보기</button></td>
+						<td><button class="btn">이동</button></td>
+					</tr>
+					<tr>
+						<td>소망유치원</td>
+						<td>사설</td>
+						<td>인천시 미추홀구 경원대로 717</td>
+						<td><button class="btn">보기</button></td>
+						<td><button class="btn">이동</button></td>
+					</tr>
+				</table>
 			</div>
 		</div>
 	</div>

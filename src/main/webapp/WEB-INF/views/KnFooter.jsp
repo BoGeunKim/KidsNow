@@ -23,11 +23,11 @@
 	height: 50px;
 }
 
-ul {
+ft_content ul {
 	list-style: none;
 }
 
-li {
+ft_content li {
 	display: inline;
 }
 </style>
