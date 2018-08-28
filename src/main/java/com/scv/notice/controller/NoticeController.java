@@ -82,32 +82,5 @@ public class NoticeController {
 		return "snotice/TNoticeUpdate";
 	}
 		
-	
-	//유치원소식_식단 목록
-	@RequestMapping(value = "/DietList", method = RequestMethod.GET)
-	public String DietList(Model model) 
-	{
-		return "snotice/DietList";
-	}
-	
-	//유치원소식_식단 작성
-	@RequestMapping(value = "/DietInsertForm", method = RequestMethod.GET)
-	public String DietInsertForm(Model model) 
-	{
-		return "snotice/DietInsertForm";
-	}
 
-	//유치원소식_식단 본문
-	@RequestMapping(value = "/DietContent", method = RequestMethod.GET)
-	public String DietContent(Model model) 
-	{
-		return "snotice/DietContent";
-	}
-	
-	//유치원소식_식단 수정
-	@RequestMapping(value = "/DietUpdate", method = RequestMethod.GET)
-	public String DietUpdate(Model model) 
-	{
-		return "snotice/DietUpdate";
-	}
 }
