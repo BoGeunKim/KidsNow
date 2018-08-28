@@ -51,6 +51,13 @@ public class ChiefController {
 		return "";
 	}
 	
-	
+	@RequestMapping("/test22")
+	public String test22(ModelMap map, int tSignupCode)
+	{
+		IChiefDAO dao = sqlSession.getMapper(IChiefDAO.class);
+		System.out.println("test22");
+		//dao.teaSignupOK(chiefCode, tSignupCode);
+		return "";
+	}
 	
 }

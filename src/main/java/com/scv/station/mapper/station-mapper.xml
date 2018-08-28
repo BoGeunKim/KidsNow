@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.scv.director.impl.IDirectorDAO">
+<mapper namespace="com.scv.station.impl.IStationDAO">
 	
 	<!-- 정류장 저장 -->
 	<insert id="saveStation">

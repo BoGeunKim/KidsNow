@@ -10,7 +10,6 @@ public class PhotoBoardDTO
 	private int photoBoardCode;
 	private String pBSubject, pBContent, pBRegDate;
 	
-	
 	public int getPhotoBoardCode()
 	{
 		return photoBoardCode;

@@ -102,5 +102,5 @@
 	
 	
 	<!--  Controller가 앞에서 설정한 validator를 사용하도록 설정 -->
-	<annotation-driven validator="validator"/>
+	<!-- <annotation-driven validator="validator"/> -->
 </beans:beans>
