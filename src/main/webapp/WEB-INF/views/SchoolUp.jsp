@@ -66,17 +66,17 @@
 				<div class="row">
 					<div class="col-lg-12 text-right">
 						<div class="logo_container">
-							<a href="s_main.do"><img src="images/mansion.png" style="height: 50%; width: 50%; margin-left: -200px; padding-right: 15px;">
+							<a href="SchoolMain.do"><img src="images/mansion.png" style="height: 50%; width: 50%; margin-left: -200px; padding-right: 15px;">
 							<span>쌍용</span>유치원
 							</a>
 						</div>
 						<nav class="navbar" style="font-size: 30pt;">
 							<ul class="navbar_menu">
-								<li><a href="sinfo_intro.do">유치원소개</a></li>
-								<li><a href="s_notice.do">유치원소식</a></li>
-								<li><a href="event.do">일정</a></li>
-								<li><a href="c_main.do">학급페이지</a></li>
-								<li><a href="ch_class_list.do">원장님메뉴</a></li>
+								<li><a href="SinfoIntro.do">유치원소개</a></li>
+								<li><a href="SchoolNotice.do">유치원소식</a></li>
+								<li><a href="Event.do">일정</a></li>
+								<li><a href="ClassMain.do">학급페이지</a></li>
+								<li><a href="ChiefClassLlist.do">원장님메뉴</a></li>
 							</ul>
 						</nav>
 					</div>
