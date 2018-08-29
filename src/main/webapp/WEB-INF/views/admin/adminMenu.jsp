@@ -17,11 +17,11 @@
 		<li class="nav-item active"><a class="nav-link"
 			href="adminMain.do"> <i class="glyphicon glyphicon-home"></i> <span>전체현황</span>
 		</a></li>
-		<li class="nav-item"><a class="nav-link" href="charts.html">
+		<li class="nav-item"><a class="nav-link" href="schoolInfo.do">
 				<i class="glyphicon glyphicon-education"></i> <span>유치원정보</span>
 		</a></li>
 		<li class="nav-item">
-			<a class="nav-link" href="tables.html">
+			<a class="nav-link" href="askList.do">
 				<i class="glyphicon glyphicon-th-list"></i> <span>신청목록</span>
 			</a>
 		</li>

@@ -50,7 +50,7 @@
 				<!-- Breadcrumbs-->
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="adminMain.do">관리자</a></li>
-					<li class="breadcrumb-item active">유치원정보</li>
+					<li class="breadcrumb-item active">원장님 신청목록</li>
 				</ol>
 				
 				<!-- DataTables Example -->
@@ -65,39 +65,36 @@
 								<thead>
 									<tr>
 										<th>번호</th>
-										<th>유치원명</th>
+										<th>아이디</th>
+										<th>원장명</th>
 										<th>전화번호</th>
-										<th>지역</th>
-										<th>cctv수</th>
-										<th>통학차량운영여부</th>
-										<th>사업자등록파일</th>
-										<th>가입확인날짜</th>
+										<th>사업자등록번호</th>
+										<th>신청날짜</th>
+										<th>수락/거절</th>
 									</tr>
 								</thead>
 								<tbody>
-									<%-- <c:forEach var="item" items="${schoolInfo }">
+									<c:forEach var="item" items="${askList }">
 									<tr>
 										<td>${item.rownum }</td>
-										<td>${item.schoolName }</td>
-										<td>${item.schoolTel }</td>
-										<td>${item.sigunguName }</td>
-										<td>${item.cctvCount }</td>
-										<td>${item.carServiceFlag }</td>
+										<td>${item.userId }
+										<td>${item.userName }</td>
+										<td>${item.userTel }</td>
 										<td>${item.businessLicense }</td>
-										<td>${item.signupOkDate }	</td>	
+										<td>${item.signupDate }
+										<td>버튼</td>
 									</tr>
-									</c:forEach> --%>
+									</c:forEach>
 								</tbody>
 								<tfoot>
 									<tr>
 										<th>번호</th>
-										<th>유치원명</th>
+										<th>아이디</th>
+										<th>원장명</th>
 										<th>전화번호</th>
-										<th>지역</th>
-										<th>cctv수</th>
-										<th>통학차량운영여부</th>
-										<th>사업자등록파일</th>
-										<th>가입확인날짜</th>
+										<th>사업자등록번호</th>
+										<th>신청날짜</th>
+										<th>수락/거절</th>
 									</tr>
 								</tfoot>
 							</table>
