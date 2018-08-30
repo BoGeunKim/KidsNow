@@ -60,7 +60,7 @@
 					</div>
 					<div class="card-body">
 						<div class="table-responsive">
-							<table class="table table-bordered" id="dataTable" width="100%"
+							<table class="table table-bordered" id="dataTable" style="width: 100%; text-align: center;""
 								cellspacing="0">
 								<thead>
 									<tr>
@@ -75,7 +75,7 @@
 									</tr>
 								</thead>
 								<tbody>
-									<%-- <c:forEach var="item" items="${schoolInfo }">
+									<c:forEach var="item" items="${schoolInfo }">
 									<tr>
 										<td>${item.rownum }</td>
 										<td>${item.schoolName }</td>
@@ -86,7 +86,7 @@
 										<td>${item.businessLicense }</td>
 										<td>${item.signupOkDate }	</td>	
 									</tr>
-									</c:forEach> --%>
+									</c:forEach>
 								</tbody>
 								<tfoot>
 									<tr>

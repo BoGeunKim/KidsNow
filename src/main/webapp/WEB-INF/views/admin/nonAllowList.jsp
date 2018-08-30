@@ -32,8 +32,6 @@
 <!-- Custom styles for this template-->
 <link href="css/sb-admin.css" rel="stylesheet">
 <link rel="stylesheet" href="css/bootstrap.min.css">
-
-
 </head>
 
 <body id="page-top">
@@ -52,7 +50,7 @@
 				<!-- Breadcrumbs-->
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="adminMain.do">관리자</a></li>
-					<li class="breadcrumb-item active">원장님 신청목록</li>
+					<li class="breadcrumb-item active">원장님 거절목록</li>
 				</ol>
 				
 				<!-- DataTables Example -->
@@ -62,35 +60,27 @@
 					</div>
 					<div class="card-body">
 						<div class="table-responsive">
-							<table class="table table-bordered" id="dataTable" style="width: 100%; text-align: center;"
+							<table class="table table-bordered" id="dataTable" style="width:100%; text-align: center;"
 								cellspacing="0">
 								<thead>
 									<tr>
 										<th>번호</th>
 										<th>아이디</th>
 										<th>원장명</th>
-										<th>전화번호</th>
-										<th>유치원명</th>
-										<th>유치원지역</th>
-										<th>사업자등록번호</th>
-										<th>신청날짜</th>
-										<th>수락/거절</th>
+										<th>신청일</th>
+										<th>상세보기</th>
+										<th>거절일</th>
 									</tr>
 								</thead>
 								<tbody>
-									<c:forEach var="item" items="${askList }">
+									<c:forEach var="item" items="${nonAllowList }">
 									<tr>
 										<td>${item.rownum }</td>
 										<td>${item.userId }</td>
 										<td>${item.userName }</td>
-										<td>${item.userTel }</td>
-										<td>${item.schoolName }</td>
-										<td>${item.sigunguName }</td>
-										<td>${item.businessLicense }</td>
-										<td>${item.signupDate }
-										<td>
-											<input type="button" id="check" class="btn btn-success" value="확인">
-										</td>
+										<td>${item.signupDate }</td>
+										<td>상세보기</td>
+										<td>${item.signupOkDate }</td>
 									</tr>
 									</c:forEach>
 								</tbody>
@@ -99,12 +89,9 @@
 										<th>번호</th>
 										<th>아이디</th>
 										<th>원장명</th>
-										<th>전화번호</th>
-										<th>유치원명</th>
-										<th>유치원지역</th>
-										<th>사업자등록번호</th>
-										<th>신청날짜</th>
-										<th>수락/거절</th>
+										<th>신청일</th>
+										<th>상세보기</th>
+										<th>거절일</th>
 									</tr>
 								</tfoot>
 							</table>

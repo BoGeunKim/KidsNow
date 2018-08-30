@@ -6,7 +6,7 @@ public class SchoolInfoDTO
 	private String schoolName;
 	private String schoolTel;
 	private int cctvCount;
-	private int carServiceFlag;
+	private String carServiceFlag;
 	private String businessLicense;
 	private String signupOkDate;
 	private String sigunguName;
@@ -43,11 +43,11 @@ public class SchoolInfoDTO
 	{
 		this.cctvCount = cctvCount;
 	}
-	public int getCarServiceFlag()
+	public String getCarServiceFlag()
 	{
 		return carServiceFlag;
 	}
-	public void setCarServiceFlag(int carServiceFlag)
+	public void setCarServiceFlag(String carServiceFlag)
 	{
 		this.carServiceFlag = carServiceFlag;
 	}

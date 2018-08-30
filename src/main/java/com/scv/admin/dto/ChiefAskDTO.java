@@ -3,18 +3,10 @@ package com.scv.admin.dto;
 public class ChiefAskDTO
 {
 	private int rownum;
-	private String userName, userTel, schoolName, userId, userBirth  
-    		, schoolTel, businessLicense, signupDate, sigunguName;
+	private String userName, userTel, schoolName, userId
+    		, businessLicense, signupDate, sigunguName;
 	
 	
-	public String getUserId()
-	{
-		return userId;
-	}
-	public void setUserId(String userId)
-	{
-		this.userId = userId;
-	}
 	public int getRownum()
 	{
 		return rownum;
@@ -47,13 +39,13 @@ public class ChiefAskDTO
 	{
 		this.schoolName = schoolName;
 	}
-	public String getSchoolTel()
+	public String getUserId()
 	{
-		return schoolTel;
+		return userId;
 	}
-	public void setSchoolTel(String schoolTel)
+	public void setUserId(String userId)
 	{
-		this.schoolTel = schoolTel;
+		this.userId = userId;
 	}
 	public String getBusinessLicense()
 	{

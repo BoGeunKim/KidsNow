@@ -26,12 +26,12 @@
 			</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="tables.html">
+			<a class="nav-link" href="allowList.do">
 				<i class="glyphicon glyphicon-ok"></i> <span>수락목록</span>
 			</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="tables.html">
+			<a class="nav-link" href="nonAllowList.do">
 				<i class="glyphicon glyphicon-remove"></i> <span>거절목록</span>
 			</a>
 		</li>

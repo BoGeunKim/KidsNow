@@ -1,8 +1,12 @@
 package com.scv.admin.impl;
 
 
+import java.util.ArrayList;
+
 import com.scv.admin.dto.AdminDTO;
+import com.scv.admin.dto.AllowListDTO;
 import com.scv.admin.dto.ChiefAskDTO;
+import com.scv.admin.dto.SchoolInfoDTO;
 
 public interface IAdminDAO
 {
@@ -10,12 +14,14 @@ public interface IAdminDAO
 	public int loginCheck(AdminDTO dto);
 	
 	// 유치원 정보 가져오기
-	public AdminDTO schoolInfo();
+	public ArrayList<SchoolInfoDTO> schoolInfo();
 	
 	// 원장님신청목록
-	public ChiefAskDTO askList();
+	public ArrayList<ChiefAskDTO> askList();
 	
 	// 원장님신청 승인
+	public ArrayList<AllowListDTO> allowList();
 	
 	// 원장님신청 거절
+	public ArrayList<AllowListDTO> nonAllowList();
 }

@@ -1,5 +1,7 @@
 package com.scv.admin.controller;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpSession;
 
 import org.apache.ibatis.session.SqlSession;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.scv.admin.dto.AdminDTO;
+import com.scv.admin.dto.AllowListDTO;
 import com.scv.admin.dto.ChiefAskDTO;
 import com.scv.admin.dto.SchoolInfoDTO;
 import com.scv.admin.impl.IAdminDAO;
@@ -84,23 +87,66 @@ public class AdminController {
 	public ModelAndView schoolInfo()
 	{
 		IAdminDAO dao = sqlSession.getMapper(IAdminDAO.class);
-		ModelAndView mov = new ModelAndView();
-
-		mov.addObject("schoolInfo", dao.schoolInfo());
-		mov.setViewName("admin/schoolInfo");
+		ModelAndView mav = new ModelAndView();
+		ArrayList<SchoolInfoDTO> list = dao.schoolInfo();
 		
-		return mov;
+		for (SchoolInfoDTO dto : list)
+		{
+			if (dto.getCarServiceFlag().equals("1"))
+			{
+				dto.setCarServiceFlag("O");
+			}
+			else if (dto.getCarServiceFlag().equals("0"))
+			{
+				dto.setCarServiceFlag("X");
+			}
+		}
+		
+		mav.addObject("schoolInfo", list);
+		mav.setViewName("admin/schoolInfo");
+		
+		return mav;
 	}
 	
 	@RequestMapping(value="/askList.do")
-	public ModelAndView chiefAskList(ModelAndView mov, ChiefAskDTO dto)
+	public ModelAndView chiefAskList()
 	{
 		IAdminDAO dao = sqlSession.getMapper(IAdminDAO.class);
+		ArrayList<ChiefAskDTO> list = dao.askList();
 		
-		mov.addObject("askList", dao.askList());
-		mov.setViewName("admin/askList");
+		ModelAndView mav = new ModelAndView();
 		
-		return mov;
+		mav.addObject("askList", list);
+		mav.setViewName("admin/askList");
+		
+		return mav;
 	}
 	
+	@RequestMapping(value="/allowList.do")
+	public ModelAndView allowList()
+	{
+		IAdminDAO dao = sqlSession.getMapper(IAdminDAO.class);
+		ArrayList<AllowListDTO> list = dao.allowList();
+		
+		ModelAndView mav = new ModelAndView();
+		
+		mav.addObject("allowList", list);
+		mav.setViewName("admin/allowList");
+		
+		return mav;
+	}
+	
+	@RequestMapping(value="/nonAllowList.do")
+	public ModelAndView nonAllowList()
+	{
+		IAdminDAO dao = sqlSession.getMapper(IAdminDAO.class);
+		ArrayList<AllowListDTO> list = dao.nonAllowList();
+		
+		ModelAndView mav = new ModelAndView();
+		
+		mav.addObject("nonAllowList", list);
+		mav.setViewName("admin/nonAllowList");
+		
+		return mav;
+	}
 }
