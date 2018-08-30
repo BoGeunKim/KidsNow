@@ -4,9 +4,17 @@ public class ChiefAskDTO
 {
 	private int rownum;
 	private String userName, userTel, schoolName, userId
-    		, businessLicense, signupDate, sigunguName;
+    		, businessLicense, signupDate, sigunguName, userBirth;
 	
 	
+	public String getUserBirth()
+	{
+		return userBirth;
+	}
+	public void setUserBirth(String userBirth)
+	{
+		this.userBirth = userBirth;
+	}
 	public int getRownum()
 	{
 		return rownum;

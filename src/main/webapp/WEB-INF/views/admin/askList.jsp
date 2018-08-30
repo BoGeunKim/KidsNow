@@ -72,7 +72,6 @@
 										<th>전화번호</th>
 										<th>유치원명</th>
 										<th>유치원지역</th>
-										<th>사업자등록번호</th>
 										<th>신청날짜</th>
 										<th>수락/거절</th>
 									</tr>
@@ -86,11 +85,65 @@
 										<td>${item.userTel }</td>
 										<td>${item.schoolName }</td>
 										<td>${item.sigunguName }</td>
-										<td>${item.businessLicense }</td>
 										<td>${item.signupDate }
 										<td>
-											<input type="button" id="check" class="btn btn-success" value="확인">
-										</td>
+										<div class="container">
+										
+											<!-- 버튼 -->
+											<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal${item.rownum }" >
+											  확인
+											</button>
+										
+											<!-- 모달 팝업 -->
+											<div class="modal fade" id="myModal${item.rownum }" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+											  <div class="modal-dialog">
+											    <div class="modal-content">
+											      <div class="modal-header">
+													<h4 class="modal-title" id="myModalLabel">신청서 상세보기</h4>
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+											      </div>
+											      <div class="modal-body" >
+												  <table style="text-align: center; width: 100%; border: 1px; solid #c9c9c9;">
+												  	<tr>
+												  		<th>아이디</th>
+												  		<td>${item.userId }</td>
+												  	</tr>
+												  	<tr>
+												  		<th>이름</th>
+												  		<td>${item.userName }</td>
+												  	</tr>
+												  	<tr>
+												  		<th>생년월일</th>
+												  		<td>${item.userBirth }</td>
+												  	</tr>
+												  	<tr>
+												  		<th>휴대전화</th>
+												  		<td>${item.userTel }</td>
+												  	</tr>
+												  	<tr>
+												  		<th>신청일</th>
+												  		<td>${item.signupDate }</td>
+												  	</tr>
+												  </table>
+												  <div style="width: 100%;">
+												  	<img alt="사업자등록증" src="${item.businessLicense }">
+												  </div>
+											      </div>
+											      <div class="modal-footer">
+											    <a href="allow.do"><button type="button" class="btn btn-primary">수락</button></a>
+												<a href="nonAllow.do"><button type="button" class="btn btn-danger">거절</button></a>
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											      </div>
+											    </div>
+											  </div>
+											</div>
+										
+										</div>
+										
+										<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+										<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+										<script src="http://googledrive.com/host/0B-QKv6rUoIcGREtrRTljTlQ3OTg"></script><!-- ie10-viewport-bug-workaround.js -->
+										<script src="http://googledrive.com/host/0B-QKv6rUoIcGeHd6VV9JczlHUjg"></script><!-- holder.js -->										</td>
 									</tr>
 									</c:forEach>
 								</tbody>
@@ -102,7 +155,6 @@
 										<th>전화번호</th>
 										<th>유치원명</th>
 										<th>유치원지역</th>
-										<th>사업자등록번호</th>
 										<th>신청날짜</th>
 										<th>수락/거절</th>
 									</tr>
