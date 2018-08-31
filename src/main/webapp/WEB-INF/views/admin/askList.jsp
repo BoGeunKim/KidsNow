@@ -130,7 +130,7 @@
 												  </div>
 											      </div>
 											      <div class="modal-footer">
-											    <a href="allow.do"><button type="button" class="btn btn-primary">수락</button></a>
+											    <a href="allow.do?userId=${item.userId }"><button type="button" class="btn btn-primary">수락</button></a>
 												<a href="nonAllow.do"><button type="button" class="btn btn-danger">거절</button></a>
 												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 											      </div>
